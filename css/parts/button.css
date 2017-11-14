@@ -1,0 +1,51 @@
+/*Button*/
+
+.btn-wrap {
+    padding-top: 25px;
+}
+
+.btn-wrap--center {
+    text-align: center;
+}
+
+.btn-wrap--left {
+    text-align: left;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .btn-wrap--left{
+        text-align: center;
+    }
+}
+
+.btn-wrap__btn {
+    width: auto;
+    min-width: 138px;
+    height: auto;
+    display: inline-block;
+    padding: 15px 20px;
+    color: #48bf72;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid #48bf72;
+    transition: all 0.3s ease;
+}
+
+.btn-wrap__btn--dark {
+    color: #3c4955;
+    border: 2px solid #3c4955;
+}
+
+.btn-wrap__btn:hover {
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-wrap__btn--dark:hover {
+    color: #48bf72;
+    border: 2px solid #48bf72;
+}

@@ -1,0 +1,380 @@
+@import "parts/global.css";
+
+/*Header*/
+
+.site-header {
+    height: 100vh;
+    padding-top: 36px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(60, 73, 85, 1);
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .site-header{
+        height: 100%;
+    }
+}
+
+.site-header:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.14;
+    background-attachment: fixed;
+}
+
+.site-header .logo {
+    float: left;
+}
+
+.site-header .site-navigation {
+    float: right;
+    text-align: right;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.menu-icon .fa-times {
+    display: none;
+}
+
+.menu-icon.toggle .fa-times {
+    display: block;
+}
+
+.menu-icon.toggle .fa-bars {
+    display: none;
+}
+
+.menu-icon.toggle + .menu {
+    display: block;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .menu-icon {
+        display: block;
+        position: relative;
+    }
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    height: 90px;
+    line-height: 90px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 28%;
+        left: 0;
+        text-align: start;
+        background-color: #868383;
+        padding-left: 80px;
+        height: 35%;
+        line-height: 40px;
+    }
+}
+
+.menu .menu-item {
+    display: inline-block;
+    padding: 0 50px;
+    position: relative;
+}
+
+.menu .menu-item:before {
+    content: '/';
+    position: absolute;
+    left: 0;
+    color: white;
+    opacity: 0.5;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .menu .menu-item:before{
+        content: '';
+    }
+}
+
+.menu .menu-item:first-child:before {
+    display: none;
+}
+
+.menu .menu-item:last-child {
+    padding-right: 0;
+}
+
+.menu .menu-item a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu .menu-item a:hover {
+    color: #48bf72;
+}
+
+
+/*Header info*/
+
+.site-header .info {
+    width: 90%;
+    margin: 20vh auto 0;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.info__title {
+    margin-top: 0;
+    font-family: "Big John";
+    font-size: 46px;
+    color: white;
+    text-transform: uppercase;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .info__title{
+        font-size: 35px;
+        padding-top: 20px;
+    }
+}
+
+.info__subtitle {
+    margin-top: 0;
+    font-family: "Slim Joe";
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .info__subtitle{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .site-header .info{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+}
+
+
+/*Tabs*/
+
+.tabs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.tabs .container {
+    text-align: center;
+}
+
+
+.button-group {
+    margin-bottom: 30px;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .button-group{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.button {
+    padding: 9px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #3c4955;
+    background-color: #eaeaea;
+    transition: all .3s ease;
+    border-radius: 2px;
+    border: none;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .button{
+        margin-bottom: 10px;
+    }
+}
+.button:hover{
+    cursor: pointer;
+}
+.button:focus{
+    outline: none;
+}
+
+.is-checked {
+    color: #fff;
+    background-color: #48bf72;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .tab-content__left-col{
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
+    .tab-content__right-col{
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
+}
+
+.tab-content__image-wrap {
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.tab-content__image-wrap:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(72, 191, 114, 0.8);
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.tab-content__image-wrap:hover:before {
+    opacity: 1;
+}
+
+.tab-content__image-wrap--first {
+    width: 350px;
+    height: 302px;
+    background-image: url("../img/groupe-2.png");
+}
+
+.tab-content__image-wrap--second {
+    width: 350px;
+    height: 486px;
+    background-image: url("../img/place-me-inside-psd.png");
+}
+
+.tab-content__image-wrap--third {
+    width: 350px;
+    height: 438px;
+    background-image: url("../img/groupe-1.png");
+}
+
+.tab-content__image-wrap--fourth {
+    width: 350px;
+    height: 350px;
+    background-image: url("../img/40-layers.png");
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .item{
+        margin-bottom: 10px;
+    }
+}
+
+.isotope__img{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .isotope__img{
+       width: 100%;
+        height: 250px;
+    }
+}
+
+
+/*Image Text*/
+
+.tab-content__text-wrap {
+    display: inline-block;
+    /*for align*/
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.tab-content__image-wrap:hover .tab-content__text-wrap {
+    opacity: 1;
+}
+
+.tab-content__text {
+    display: table-cell;
+    /*for align*/
+    vertical-align: middle;
+    /*for align*/
+    color: #fff;
+    line-height: 30px;
+}
+
+.tab-content__text--first {
+    height: 302px;
+    /*for align*/
+}
+
+.tab-content__text--second {
+    height: 486px;
+    /*for align*/
+}
+
+.tab-content__text--third {
+    height: 438px;
+    /*for align*/
+}
+
+.tab-content__text--fourth {
+    height: 350px;
+    /*for align*/
+}
+
+.tab-content__subtitle {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+
+/*Contact form section*/
+
+.contact-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.contact-form__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #48bf72;
+    font-family: "Big John";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 25px;
+}

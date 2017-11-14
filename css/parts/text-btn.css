@@ -1,0 +1,44 @@
+/*text and button section*/
+
+.text-btn {
+    height: 500px;
+    background-image: url("../../img/men-computer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: gray;
+}
+
+.text-btn__info {
+    width: 50%;
+    float: right;
+    color: #ffffff;
+    padding-right: 13.6%;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .text-btn__info{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.text-btn__info--v-align {
+	display: table-cell;
+	height: 500px;
+	vertical-align: middle;
+}
+
+.text-btn__subtitle {
+    margin-top: 0;
+    font-size: 22px;
+	font-weight: 400;
+}
+
+.text-btn__text {
+    height: 146px;
+	overflow: hidden;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 25px;
+}

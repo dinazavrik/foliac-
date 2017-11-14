@@ -1,0 +1,150 @@
+/*form*/
+
+.form {}
+
+.form__text {
+    margin-top: 0;
+    border-radius: 3px;
+    background-color: #3c4955;
+    padding: 2px 2px 0 50px;
+    position: relative;
+}
+
+.form__text:not(.form__text--message) {
+    height: 50px;
+}
+
+.form__text:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: calc(50% - 7.5px);
+    left: 50px;
+    border-top: 7.5px solid transparent;
+    border-left: 15px solid #3c4955;
+    border-bottom: 7.5px solid transparent;
+}
+
+.form__text--name {
+    width: 50%;
+    float: left;
+    line-height: 0;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .form__text--name{
+        width: 100%;
+        float: none;
+    }
+}
+
+.form__text--name:before {
+    content: "\f007";
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    color: white;
+    top: calc(50% - 11px);
+    left: 14px;
+}
+
+.form__text--email {
+    width: 46%;
+    float: right;
+    line-height: 0;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px){
+    .form__text--email{
+        width: 100%;
+        float: none;
+    }
+}
+
+.form__text--email:before {
+    content: "\f0e0";
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    color: white;
+    top: calc(50% - 11px);
+    left: 14px;
+}
+
+.form__input {
+    width: 100%;
+    height: 46px;
+    padding: 0 22px;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__input::-webkit-input-placeholder,
+.form__input::-moz-placeholder,
+.form__input:-ms-input-placeholder,
+.form__input:-moz-placeholder {
+    color: #a6a5a5;
+}
+
+.form__text--message {
+    height: 228px;
+    padding-left: 50px;
+    clear: both;
+    line-height: 0;
+}
+
+.form__text--message:after {
+    top: 18px;
+}
+
+.form__icon {
+    position: absolute;
+    font-size: 22px;
+    left: 14px;
+    top: 15px;
+    color: white;
+}
+
+.form__textarea {
+    width: 100%;
+    height: 224px;
+    padding: 16.5px 22px;
+    resize: none;
+}
+
+
+.form__textarea:focus {
+    outline: none;
+}
+
+.form__btn {
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+    display: block;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #48bf72;
+    transition: all 0.3s ease;
+}
+
+.form__btn:hover {
+    cursor: pointer;
+    color: #3c4955;
+    border-radius: 3px;
+    background-color: darkgrey;
+}
